@@ -7,6 +7,32 @@ body {
     margin: 0;
 }
 
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    left: 0;
+}
+
+.animated-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    animation: colorChange 3s infinite linear;
+}
+
+/* Animation de changement de couleur */
+@keyframes colorChange {
+    0% { color: red; }
+    16% { color: orange; }
+    33% { color: yellow; }
+    50% { color: green; }
+    66% { color: blue; }
+    83% { color: indigo; }
+    100% { color: violet; }
+}
+
+
 .zone {
     margin: 20px auto;
     padding: 30px;
@@ -58,6 +84,12 @@ body {
     transform: scale(1.2);
 }
 
+.result-icon {
+    font-size: 2em;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
 .dialog {
     display: none;
     position: fixed;
@@ -94,25 +126,6 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
-
-h2 {
-    margin-bottom: 15px;
-    font-size: 1.5em;
-}
-
-p {
-    font-size: 1.2em;
-}
-
-footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-}
-
 
 @keyframes fadeIn {
     0% {
