@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre, Feuille, Ciseaux</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="zone rouge" id="choixJoueur">
+        <h2>Choisissez votre coup :</h2>
+        <button onclick="jouer(1)"><img src="images/caillou.png" alt="Pierre" class="image"></button>
+        <button onclick="jouer(2)"><img src="images/feuille.png" alt="Feuille" class="image"></button>
+        <button onclick="jouer(3)"><img src="images/ciseaux.png" alt="Ciseaux" class="image"></button>
+    </div>
+
+    <div class="zone bleu" id="scoreZone">
+        <h2>Score :</h2>
+        <p id="score">Joueur: 0 | Ordinateur: 0</p>
+    </div>
+
+    <div class="zone jaune" id="choixUtilisateur" style="display:none;">
+        <h2>Votre choix :</h2>
+        <img id="utilisateurChoix" class="image-choix" alt="Choix Utilisateur">
+    </div>
+
+    <div class="zone vert" id="choixOrdinateur" style="display:none;">
+        <h2>Choix de l'ordinateur :</h2>
+        <img id="ordinateurChoix" class="image-choix" alt="Choix Ordinateur">
+    </div>
+
+    <button class="zone noir" onclick="reset()">Remettre à zéro</button>
+
+    <div id="dialog" class="dialog">
+        <div class="dialog-content">
+            <span class="close" onclick="fermerDialog()">&times;</span>
+            <p id="resultatDialog"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
